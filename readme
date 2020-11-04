@@ -1,0 +1,13 @@
+source ./venvs/vibot_venv/bin/activate
+
+cd ~/vibot2_ws/src/apriltag/scripts
+
+source ~/vibot2_ws/devel/setup.bash
+
+roslaunch apriltag apriltag_localization.launch
+
+ls /dev/video*
+
+rostopic pub -r 50 /activate_qr_localization std_msgs/Bool 'True'
+
+rostopic pub -r 50 /activate_qr_localization std_msgs/Bool 'False'

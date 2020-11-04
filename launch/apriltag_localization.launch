@@ -1,0 +1,6 @@
+<launch>
+
+<node pkg="apriltag" type="apriltag_localization.py" name="apriltag_localization" output="screen">
+</node>
+
+</launch>
